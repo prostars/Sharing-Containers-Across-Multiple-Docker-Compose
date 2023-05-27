@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "3306:3306"
+  
+  zookeeper:
+    image: zookeeper:latest
+    ports:
+      - "2181:2181"
+
+  memcached:
+    image: memcached:latest
+    ports:
+      - "11211:11211"
