@@ -1,0 +1,22 @@
+version: '3'
+name: myproject
+services:
+  mysql:
+    image: mysql:latest
+    container_name: local_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "3306:3306"
+  
+  zookeeper:
+    image: zookeeper:latest
+    container_name: local_zookeeper
+    ports:
+      - "2181:2181"
+
+  memcached:
+    image: memcached:latest
+    container_name: local_memcached
+    ports:
+      - "11211:11211"
